@@ -1,0 +1,16 @@
+model PaybridgeTransaction {
+  id             String   @id @default(cuid())
+  gateway        String
+  reference      String   @unique
+  amount         Int?
+  currency       String?
+  status         String?
+  metadata       Json?
+  customerId     String?
+  webhookPayload Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([gateway, status, createdAt])
+  @@index([customerId, createdAt])
+}

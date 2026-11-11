@@ -1,0 +1,11 @@
+src/
+tests/
+docs/
+examples/
+coverage/
+vitest.config.ts
+tsconfig.json
+tsup.config.ts
+typedoc.json
+*.log
+*.tsbuildinfo

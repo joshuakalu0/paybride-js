@@ -1,0 +1,9 @@
+{
+  "name": "paybridge-express-prisma-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}

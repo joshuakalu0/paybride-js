@@ -1,0 +1,14 @@
+{
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "entryPointStrategy": "resolve",
+  "out": "docs/api",
+  "plugin": [],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "readme": "README.md",
+  "sort": [
+    "source-order"
+  ]
+}

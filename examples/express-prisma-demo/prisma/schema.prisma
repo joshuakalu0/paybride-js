@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PaybridgeTransaction {
+  id             String   @id @default(cuid())
+  gateway        String
+  reference      String   @unique
+  amount         Int?
+  currency       String?
+  status         String?
+  metadata       Json?
+  customerId     String?
+  webhookPayload Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
